@@ -44,9 +44,9 @@ class KillerConfig:
     """إعدادات استراتيجية سفّاح الكريبتو"""
     
     # Scoring System
-    MIN_SCORE = 180              # الحد الأدنى للدخول (من 400) - مخفف للاختبار
-    EXTREME_THRESHOLD = 280      # إشارة خرافية
-    HIGH_THRESHOLD = 230         # إشارة قوية جداً
+    MIN_SCORE = 200              # الحد الأدنى للدخول (من 400) - محسّن
+    EXTREME_THRESHOLD = 290      # إشارة خرافية
+    HIGH_THRESHOLD = 245         # إشارة قوية جداً
     
     # Risk Management
     EXTREME_TARGET1 = 3.5        # T1 للإشارات الخرافية
@@ -78,6 +78,8 @@ class KillerConfig:
     OB_VOLUME_MULTIPLIER = 2.0   # حجم 2x = دخول مؤسسي
     OB_RALLY_MIN = 0.02          # صعود 2%+ بعد OB
     OB_MAX_TOUCHES = 1           # اختبار واحد فقط
+    OB_FRESH_ONLY = True         # Order Blocks جديدة فقط
+    OB_PROXIMITY_THRESHOLD = 0.015  # السعر قريب من OB (1.5%)
     
     # Fair Value Gaps
     FVG_MIN_SIZE = 0.008         # فجوة 0.8%+ فقط
@@ -93,10 +95,17 @@ class KillerConfig:
     
     # Data & Performance
     CANDLES_LOOKBACK = 500       # عدد الشموع للتحليل
-    TIMEFRAME = '5m'             # الإطار الزمني
+    TIMEFRAME = '15m'            # الإطار الزمني - محسّن لـ ICT
     MIN_VOLUME_USDT = 5_000_000  # 5 مليون حد أدنى
     MAX_CONCURRENT = 10          # تحليل متوازي
     SCAN_INTERVAL = 300          # 5 دقائق بين المسحات
+    
+    # Entry Optimization (NEW!)
+    REQUIRE_PULLBACK = True      # انتظار تصحيح قبل الدخول
+    PULLBACK_MIN = 0.003         # تصحيح 0.3% على الأقل
+    PULLBACK_MAX = 0.015         # تصحيح 1.5% كحد أقصى
+    PREMIUM_DISCOUNT_FILTER = True  # فلتر المناطق المميزة
+    DISCOUNT_ZONE_MAX = 0.4      # أقل من 40% من النطاق = منطقة خصم
     
     # Alerts
     AVOID_DUPLICATE_HOURS = 2    # لا تكرار خلال ساعتين
@@ -681,6 +690,43 @@ class CryptoKillerStrategy:
                 'signals': [s['message'] for s in whale_data['signals']],
                 'reason': '🐋 نشاط حيتان مكثف!'
             }
+        
+        # ═══════════════════════════════════════
+        # ✅ ENTRY FILTERS (NEW!)
+        # ═══════════════════════════════════════
+        
+        # 1. Pullback Filter: هل السعر في تصحيح؟
+        if KillerConfig.REQUIRE_PULLBACK:
+            recent_high = df['high'].tail(20).max()
+            pullback_pct = (recent_high - current_price) / recent_high
+            
+            if not (KillerConfig.PULLBACK_MIN <= pullback_pct <= KillerConfig.PULLBACK_MAX):
+                return {
+                    'signal': 'WAIT',
+                    'score': total_score,
+                    'percentage': (total_score / 400) * 100,
+                    'reason': f'ننتظر pullback أفضل (حالياً: {pullback_pct:.1%})',
+                    'breakdown': breakdown
+                }
+        
+        # 2. Premium/Discount Filter: هل السعر في منطقة خصم؟
+        if KillerConfig.PREMIUM_DISCOUNT_FILTER:
+            swing_high = df['high'].tail(50).max()
+            swing_low = df['low'].tail(50).min()
+            range_size = swing_high - swing_low
+            
+            if range_size > 0:
+                position_in_range = (current_price - swing_low) / range_size
+                
+                # نريد شراء في Discount zone فقط (أقل من 40% من النطاق)
+                if position_in_range > KillerConfig.DISCOUNT_ZONE_MAX:
+                    return {
+                        'signal': 'WAIT',
+                        'score': total_score,
+                        'percentage': (total_score / 400) * 100,
+                        'reason': f'السعر في Premium zone ({position_in_range:.0%}) - ننتظر Discount',
+                        'breakdown': breakdown
+                    }
         
         # ═══════════════════════════════════════
         # 📊 FINAL DECISION
