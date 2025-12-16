@@ -44,9 +44,9 @@ class KillerConfig:
     """إعدادات استراتيجية سفّاح الكريبتو"""
     
     # Scoring System
-    MIN_SCORE = 250              # الحد الأدنى للدخول (من 400)
-    EXTREME_THRESHOLD = 320      # إشارة خرافية
-    HIGH_THRESHOLD = 280         # إشارة قوية جداً
+    MIN_SCORE = 180              # الحد الأدنى للدخول (من 400) - مخفف للاختبار
+    EXTREME_THRESHOLD = 280      # إشارة خرافية
+    HIGH_THRESHOLD = 230         # إشارة قوية جداً
     
     # Risk Management
     EXTREME_TARGET1 = 3.5        # T1 للإشارات الخرافية
