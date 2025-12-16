@@ -776,12 +776,15 @@ class TelegramNotifier:
         confidence_emoji = "💀" if signal['confidence'] == 'EXTREME' else ("⚡" if signal['confidence'] == 'HIGH' else "🎯")
         setup_emoji = "🔥" if 'CHoCH' in signal['structure_type'] else "📊"
         
+        # Hashtag للعملة (بدون /)
+        symbol_tag = signal['symbol'].replace('/', '')
+        
         # Breakdown
         breakdown_text = ' • '.join([f"{k.replace('_', ' ').title()}: ✓" 
                                     for k in signal['breakdown'].keys()])
         
         message = f"""
-{confidence_emoji} <b>{signal['symbol']}</b> | 🟢 BUY @ {signal['entry']:.4f}
+{confidence_emoji} <b>#{symbol_tag}</b> | 🟢 BUY @ {signal['entry']:.4f}
 
 {setup_emoji} <b>Setup:</b> {signal['structure_type'].replace('_', ' ')}
 📊 <b>Score:</b> {signal['score']}/400 ({signal['percentage']:.1f}%)
