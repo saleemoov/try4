@@ -41,25 +41,47 @@ logging.basicConfig(
 # ============================================================================
 
 class KillerConfig:
-    """إعدادات استراتيجية سفّاح الكريبتو"""
+    """إعدادات استراتيجية سفّاح الكريبتو - النسخة القاتلة 💀"""
     
     # Scoring System
-    MIN_SCORE = 200              # الحد الأدنى للدخول (من 400) - محسّن
+    MIN_SCORE = 200              # الحد الأدنى للدخول (من 400)
     EXTREME_THRESHOLD = 290      # إشارة خرافية
     HIGH_THRESHOLD = 245         # إشارة قوية جداً
     
-    # Risk Management
-    EXTREME_TARGET1 = 3.5        # T1 للإشارات الخرافية
-    EXTREME_TARGET2 = 6.0        # T2 للإشارات الخرافية
-    EXTREME_SL = 1.0             # SL للإشارات الخرافية
+    # Risk Management - محسّن!
+    EXTREME_TARGET1 = 2.0        # T1 سريع (50% من المحفظة)
+    EXTREME_TARGET2 = 3.5        # T2 (الباقي)
+    EXTREME_SL = 1.0             # SL
     
-    HIGH_TARGET1 = 3.0           # T1 للإشارات القوية
-    HIGH_TARGET2 = 5.0           # T2 للإشارات القوية
-    HIGH_SL = 1.3                # SL للإشارات القوية
+    HIGH_TARGET1 = 2.0           # T1 سريع
+    HIGH_TARGET2 = 3.5           # T2
+    HIGH_SL = 1.2                # SL
     
-    GOOD_TARGET1 = 2.5           # T1 للإشارات العادية
-    GOOD_TARGET2 = 4.0           # T2 للإشارات العادية
-    GOOD_SL = 1.5                # SL للإشارات العادية
+    GOOD_TARGET1 = 2.0           # T1 سريع
+    GOOD_TARGET2 = 3.5           # T2
+    GOOD_SL = 1.5                # SL
+    
+    # Range Detection (NEW!)
+    RANGE_MAX_PCT = 1.8          # Range أقصى 1.8%
+    RANGE_MIN_DURATION = 16      # 4 ساعات على الأقل (16 شمعة 15m)
+    RANGE_MAX_DURATION = 32      # 8 ساعات كحد أقصى
+    
+    # EMA Settings (NEW!)
+    EMA_FAST = 5
+    EMA_MID = 8
+    EMA_SLOW = 13
+    EMA_PROXIMITY = 0.003        # 0.3% قرب للتقاطع المبكر
+    
+    # Volume (NEW!)
+    VOLUME_DECLINING_CANDLES = 3 # آخر 3 شموع تتناقص
+    VOLUME_LOW_THRESHOLD = 0.7   # 70% من المتوسط
+    BREAKOUT_VOLUME_MIN = 1.2    # 120% volume عند الكسر
+    
+    # Exit Strategy (NEW!)
+    MAX_TRADE_HOURS = 3          # خروج إجباري بعد 3 ساعات
+    TRAILING_STOP_TRIGGER = 3.0  # تفعيل trailing عند 3%
+    TRAILING_STOP_PCT = 1.5      # trailing stop 1.5%
+    QUICK_EXIT_TIME = 60         # T1 خلال ساعة
     
     # Volatility-Based Scoring (أذكى من Session Timing!)
     HIGH_VOLATILITY_THRESHOLD = 1.3    # ATR أعلى من 1.3x المتوسط
@@ -100,12 +122,11 @@ class KillerConfig:
     MAX_CONCURRENT = 10          # تحليل متوازي
     SCAN_INTERVAL = 300          # 5 دقائق بين المسحات
     
-    # Entry Optimization (NEW!)
-    REQUIRE_PULLBACK = True      # انتظار تصحيح قبل الدخول
-    PULLBACK_MIN = 0.003         # تصحيح 0.3% على الأقل
-    PULLBACK_MAX = 0.015         # تصحيح 1.5% كحد أقصى
-    PREMIUM_DISCOUNT_FILTER = True  # فلتر المناطق المميزة
-    DISCOUNT_ZONE_MAX = 0.4      # أقل من 40% من النطاق = منطقة خصم
+    # Higher Lows (NEW!)
+    HIGHER_LOWS_MIN = 3          # 3 قيعان صاعدة على الأقل
+    
+    # Lower Wicks (NEW!)
+    LOWER_WICK_MIN = 0.3         # 30% من الشمعة
     
     # Alerts
     AVOID_DUPLICATE_HOURS = 2    # لا تكرار خلال ساعتين
@@ -543,34 +564,415 @@ class WhaleWatcher:
         }
 
 # ============================================================================
+# RANGE DETECTOR (NEW!)
+# ============================================================================
+
+class RangeDetector:
+    """
+    كاشف المستطيلات الذهبية 💎
+    - Range ضيق (<1.8%)
+    - مدة 4-8 ساعات
+    - Consolidation واضح
+    """
+    
+    def detect_consolidation(self, df: pd.DataFrame) -> Dict:
+        """كشف Range/Consolidation"""
+        try:
+            # آخر N شمعة للتحليل
+            lookback = int(KillerConfig.RANGE_MAX_DURATION)
+            recent = df.tail(lookback)
+            
+            if len(recent) < KillerConfig.RANGE_MIN_DURATION:
+                return {'in_range': False, 'reason': 'بيانات غير كافية'}
+            
+            # حساب Range
+            high = recent['high'].max()
+            low = recent['low'].min()
+            range_pct = ((high - low) / low) * 100
+            
+            # التحقق من Range الضيق
+            if range_pct > KillerConfig.RANGE_MAX_PCT:
+                return {
+                    'in_range': False,
+                    'range_pct': range_pct,
+                    'reason': f'Range واسع ({range_pct:.1f}%)'
+                }
+            
+            # التحقق من المدة
+            # نعد الشموع التي في نطاق ضيق
+            candles_in_range = 0
+            for i in range(len(recent)):
+                candle_high = recent.iloc[i]['high']
+                candle_low = recent.iloc[i]['low']
+                if candle_low >= low * 0.995 and candle_high <= high * 1.005:
+                    candles_in_range += 1
+            
+            if candles_in_range < KillerConfig.RANGE_MIN_DURATION:
+                return {
+                    'in_range': False,
+                    'reason': f'مدة قصيرة ({candles_in_range} شموع)'
+                }
+            
+            # نجح! Range مثالي
+            current_price = df['close'].iloc[-1]
+            position_in_range = ((current_price - low) / (high - low)) if (high - low) > 0 else 0.5
+            
+            return {
+                'in_range': True,
+                'range_pct': range_pct,
+                'duration': candles_in_range,
+                'high': high,
+                'low': low,
+                'position': position_in_range,
+                'is_discount': position_in_range < 0.4,  # أقل من 40% = Discount
+                'score': 60 if position_in_range < 0.4 else 40,
+                'reason': f'Range {range_pct:.1f}% لمدة {candles_in_range} شموع'
+            }
+            
+        except Exception as e:
+            logging.warning(f"Range detection failed: {e}")
+            return {'in_range': False, 'reason': str(e)}
+
+# ============================================================================
+# EMA ANALYZER (NEW!)
+# ============================================================================
+
+class EMAAnalyzer:
+    """
+    محلل EMA 5/8/13 + Pre-Crossover Detection
+    - تقاطع مبكر (قبل 1-2 شمعة)
+    - Momentum confirmation
+    """
+    
+    def analyze_ema_setup(self, df: pd.DataFrame) -> Dict:
+        """تحليل EMA وكشف التقاطع المبكر"""
+        try:
+            # حساب EMAs
+            ema5 = df['close'].ewm(span=KillerConfig.EMA_FAST, adjust=False).mean()
+            ema8 = df['close'].ewm(span=KillerConfig.EMA_MID, adjust=False).mean()
+            ema13 = df['close'].ewm(span=KillerConfig.EMA_SLOW, adjust=False).mean()
+            
+            current_ema5 = ema5.iloc[-1]
+            current_ema8 = ema8.iloc[-1]
+            current_ema13 = ema13.iloc[-1]
+            
+            # التقاطع الكامل (Full Crossover)
+            full_bullish = (current_ema5 > current_ema8) and (current_ema8 > current_ema13)
+            
+            # التقاطع المبكر (Pre-Crossover)
+            ema5_near_8 = abs(current_ema5 - current_ema8) / current_ema8 < KillerConfig.EMA_PROXIMITY
+            ema8_near_13 = abs(current_ema8 - current_ema13) / current_ema13 < KillerConfig.EMA_PROXIMITY
+            
+            # Momentum: EMA 5 يصعد
+            ema5_rising = ema5.iloc[-1] > ema5.iloc[-3]
+            ema5_slope = (ema5.iloc[-1] - ema5.iloc[-3]) / ema5.iloc[-3]
+            
+            # Pre-crossover مع momentum
+            early_signal = (
+                (current_ema5 >= current_ema8 * 0.998) and
+                (current_ema8 >= current_ema13 * 0.998) and
+                ema5_rising and
+                (ema5_slope > 0.002)  # يصعد بسرعة
+            )
+            
+            # النقاط
+            if full_bullish:
+                score = 70
+                status = 'FULL_CROSS'
+                reason = 'EMA 5>8>13 ✅'
+            elif early_signal:
+                score = 55
+                status = 'PRE_CROSS'
+                reason = 'EMA قريب من التقاطع (مبكر!)'
+            elif ema5_near_8 and ema5_rising:
+                score = 40
+                status = 'PREPARING'
+                reason = 'EMA يستعد للتقاطع'
+            else:
+                score = 0
+                status = 'NO_SIGNAL'
+                reason = 'EMA ليس جاهزاً'
+            
+            return {
+                'score': score,
+                'status': status,
+                'reason': reason,
+                'ema5': current_ema5,
+                'ema8': current_ema8,
+                'ema13': current_ema13,
+                'full_bullish': full_bullish,
+                'early_signal': early_signal,
+                'slope': ema5_slope
+            }
+            
+        except Exception as e:
+            logging.warning(f"EMA analysis failed: {e}")
+            return {'score': 0, 'status': 'ERROR', 'reason': str(e)}
+    
+    def check_ema_exit(self, df: pd.DataFrame) -> bool:
+        """فحص إشارة خروج EMA (EMA 5 تقطع تحت EMA 8)"""
+        try:
+            ema5 = df['close'].ewm(span=KillerConfig.EMA_FAST, adjust=False).mean()
+            ema8 = df['close'].ewm(span=KillerConfig.EMA_MID, adjust=False).mean()
+            
+            # Death Cross
+            return ema5.iloc[-1] < ema8.iloc[-1]
+        except:
+            return False
+
+# ============================================================================
+# VOLUME ANALYZER (NEW!)
+# ============================================================================
+
+class VolumeAnalyzer:
+    """
+    محلل Volume المتقدم
+    - Volume declining pattern
+    - Breakout volume confirmation
+    """
+    
+    def analyze_volume_pattern(self, df: pd.DataFrame) -> Dict:
+        """تحليل نمط Volume"""
+        try:
+            volume = df['volume']
+            avg_volume = volume.rolling(20).mean().iloc[-1]
+            
+            # آخر N شموع
+            recent_volume = volume.tail(KillerConfig.VOLUME_DECLINING_CANDLES)
+            
+            # Volume declining؟
+            is_declining = all(
+                recent_volume.iloc[i] > recent_volume.iloc[i+1]
+                for i in range(len(recent_volume)-1)
+            )
+            
+            # Volume منخفض؟
+            current_volume = volume.iloc[-1]
+            is_low = current_volume < avg_volume * KillerConfig.VOLUME_LOW_THRESHOLD
+            
+            # النقاط
+            if is_declining and is_low:
+                score = 50
+                reason = f'Volume يتناقص ({current_volume/avg_volume:.1%} من المتوسط)'
+            elif is_low:
+                score = 30
+                reason = f'Volume منخفض'
+            else:
+                score = 0
+                reason = 'Volume عادي أو مرتفع'
+            
+            return {
+                'score': score,
+                'is_declining': is_declining,
+                'is_low': is_low,
+                'current': current_volume,
+                'average': avg_volume,
+                'ratio': current_volume / avg_volume if avg_volume > 0 else 1,
+                'reason': reason
+            }
+            
+        except Exception as e:
+            logging.warning(f"Volume analysis failed: {e}")
+            return {'score': 0, 'reason': str(e)}
+    
+    def check_breakout_volume(self, df: pd.DataFrame) -> bool:
+        """تحقق من Volume الكسر"""
+        try:
+            volume = df['volume']
+            avg_volume = volume.rolling(20).mean().iloc[-1]
+            current_volume = volume.iloc[-1]
+            
+            return current_volume >= avg_volume * KillerConfig.BREAKOUT_VOLUME_MIN
+        except:
+            return False
+
+# ============================================================================
+# PATTERN DETECTOR (NEW!)
+# ============================================================================
+
+class PatternDetector:
+    """
+    كاشف الأنماط الإضافية
+    - Higher lows
+    - Lower wicks
+    - Break confirmation
+    """
+    
+    def detect_higher_lows(self, df: pd.DataFrame) -> Dict:
+        """كشف قيعان صاعدة"""
+        try:
+            lows = df['low'].tail(15)
+            
+            # إيجاد local lows (swing lows)
+            swing_lows = []
+            for i in range(2, len(lows)-2):
+                if lows.iloc[i] < lows.iloc[i-1] and lows.iloc[i] < lows.iloc[i+1]:
+                    swing_lows.append(lows.iloc[i])
+            
+            if len(swing_lows) < KillerConfig.HIGHER_LOWS_MIN:
+                return {
+                    'found': False,
+                    'score': 0,
+                    'reason': f'قيعان قليلة ({len(swing_lows)})'
+                }
+            
+            # التحقق من الصعود
+            last_lows = swing_lows[-KillerConfig.HIGHER_LOWS_MIN:]
+            is_ascending = all(
+                last_lows[i] < last_lows[i+1]
+                for i in range(len(last_lows)-1)
+            )
+            
+            if is_ascending:
+                return {
+                    'found': True,
+                    'score': 45,
+                    'count': len(last_lows),
+                    'reason': f'{len(last_lows)} قيعان صاعدة ✅'
+                }
+            else:
+                return {
+                    'found': False,
+                    'score': 0,
+                    'reason': 'القيعان ليست صاعدة'
+                }
+                
+        except Exception as e:
+            logging.warning(f"Higher lows detection failed: {e}")
+            return {'found': False, 'score': 0, 'reason': str(e)}
+    
+    def check_lower_wicks(self, df: pd.DataFrame) -> Dict:
+        """فحص Lower wicks الطويلة"""
+        try:
+            recent = df.tail(10)
+            strong_wicks = 0
+            
+            for _, candle in recent.iterrows():
+                low = candle['low']
+                close = candle['close']
+                open_price = candle['open']
+                high = candle['high']
+                
+                full_range = high - low
+                if full_range == 0:
+                    continue
+                
+                lower_wick = min(close, open_price) - low
+                wick_ratio = lower_wick / full_range
+                
+                if wick_ratio >= KillerConfig.LOWER_WICK_MIN:
+                    strong_wicks += 1
+            
+            if strong_wicks >= 3:
+                return {
+                    'found': True,
+                    'score': 35,
+                    'count': strong_wicks,
+                    'reason': f'{strong_wicks} lower wicks قوية (rejection!)'
+                }
+            else:
+                return {
+                    'found': False,
+                    'score': 0,
+                    'reason': 'lower wicks ضعيفة'
+                }
+                
+        except Exception as e:
+            logging.warning(f"Lower wicks check failed: {e}")
+            return {'found': False, 'score': 0, 'reason': str(e)}
+
+# ============================================================================
 # CRYPTO KILLER STRATEGY (MAIN ENGINE)
 # ============================================================================
 
 class CryptoKillerStrategy:
     """
-    💀 محرك استراتيجية سفّاح الكريبتو
-    نظام النقاط: 400 نقطة كحد أقصى
+    💀 محرك استراتيجية سفّاح الكريبتو - النسخة القاتلة!
+    نظام النقاط المحسّن: 550 نقطة كحد أقصى
+    - Range Detection: 60
+    - EMA Setup: 70
+    - Volume Pattern: 50
+    - Higher Lows: 45
+    - Lower Wicks: 35
     - Market Structure: 150
     - Order Block: 80
-    - FVG: 70
-    - Liquidity: 50
-    - Whales: 50
+    - Volatility: 40
+    - Liquidity: 30
+    - Whales: 30
     """
     
     def __init__(self):
+        # المحللات الأصلية
         self.market_structure = MarketStructureAnalyzer()
         self.ob_detector = SmartOrderBlockDetector()
         self.fvg_hunter = FVGHunter()
         self.liq_hunter = LiquidityHunter()
         self.whale_watcher = WhaleWatcher()
         self.volatility_analyzer = VolatilityAnalyzer()
+        
+        # المحللات الجديدة (السلاح السري!)
+        self.range_detector = RangeDetector()
+        self.ema_analyzer = EMAAnalyzer()
+        self.volume_analyzer = VolumeAnalyzer()
+        self.pattern_detector = PatternDetector()
     
     def generate_signal(self, symbol: str, df: pd.DataFrame) -> Dict:
-        """توليد إشارة تداول مع نظام النقاط"""
+        """توليد إشارة تداول مع نظام النقاط المحسّن"""
         
         total_score = 0
         breakdown = {}
         current_price = df['close'].iloc[-1]
+        
+        # ═══════════════════════════════════════
+        # 🔥 الفلاتر الجديدة (يجب النجاح قبل المتابعة!)
+        # ═══════════════════════════════════════
+        
+        # 1. Range Detection (إلزامي!)
+        range_data = self.range_detector.detect_consolidation(df)
+        if not range_data['in_range']:
+            return {
+                'signal': 'WAIT',
+                'score': 0,
+                'reason': f'خارج Range: {range_data["reason"]}'
+            }
+        
+        breakdown['range'] = range_data
+        total_score += range_data['score']
+        
+        # 2. EMA Setup (إلزامي!)
+        ema_data = self.ema_analyzer.analyze_ema_setup(df)
+        if ema_data['score'] < 40:  # على الأقل Preparing
+            return {
+                'signal': 'WAIT',
+                'score': total_score,
+                'reason': f'EMA ليس جاهزاً: {ema_data["reason"]}'
+            }
+        
+        breakdown['ema'] = ema_data
+        total_score += ema_data['score']
+        
+        # 3. Volume Pattern (اختياري لكن مهم)
+        volume_data = self.volume_analyzer.analyze_volume_pattern(df)
+        breakdown['volume'] = volume_data
+        total_score += volume_data['score']
+        
+        # 4. Higher Lows (اختياري)
+        higher_lows = self.pattern_detector.detect_higher_lows(df)
+        if higher_lows['found']:
+            breakdown['higher_lows'] = higher_lows
+            total_score += higher_lows['score']
+        
+        # 5. Lower Wicks (اختياري)
+        lower_wicks = self.pattern_detector.check_lower_wicks(df)
+        if lower_wicks['found']:
+            breakdown['lower_wicks'] = lower_wicks
+            total_score += lower_wicks['score']
+        
+        # 6. Breakout Volume Confirmation
+        has_breakout_volume = self.volume_analyzer.check_breakout_volume(df)
+        if not has_breakout_volume:
+            # لا نرفض الإشارة، لكن نخفض النقاط
+            total_score = int(total_score * 0.9)
         
         # ═══════════════════════════════════════
         # 1️⃣ MARKET STRUCTURE (150 max)
@@ -729,11 +1131,11 @@ class CryptoKillerStrategy:
                     }
         
         # ═══════════════════════════════════════
-        # 📊 FINAL DECISION
+        # 📊 FINAL DECISION - محسّن!
         # ═══════════════════════════════════════
         
         if total_score >= KillerConfig.MIN_SCORE:
-            # حساب Targets & SL حسب قوة الإشارة
+            # حساب Targets & SL حسب قوة الإشارة (محسّن!)
             if total_score >= KillerConfig.EXTREME_THRESHOLD:
                 t1, t2, sl = KillerConfig.EXTREME_TARGET1, KillerConfig.EXTREME_TARGET2, KillerConfig.EXTREME_SL
                 confidence = 'EXTREME'
@@ -748,22 +1150,25 @@ class CryptoKillerStrategy:
                 'signal': 'BUY',
                 'symbol': symbol,
                 'score': total_score,
-                'max_score': 400,
-                'percentage': (total_score / 400) * 100,
+                'max_score': 550,  # محدّث!
+                'percentage': (total_score / 550) * 100,
                 'entry': current_price,
                 'target1': current_price * (1 + t1/100),
                 'target2': current_price * (1 + t2/100),
                 'stop_loss': current_price * (1 - sl/100),
                 'breakdown': breakdown,
                 'confidence': confidence,
-                'structure_type': structure['structure']
+                'structure_type': structure['structure'],
+                'entry_time': datetime.now(timezone.utc),  # للـ Exit strategy
+                'range_high': range_data['high'],  # للمراقبة
+                'ema_exit_active': True  # تفعيل EMA exit
             }
         else:
             return {
                 'signal': 'WAIT',
                 'score': total_score,
-                'percentage': (total_score / 400) * 100,
-                'reason': f'نقاط قليلة ({total_score}/400)',
+                'percentage': (total_score / 550) * 100,
+                'reason': f'نقاط قليلة ({total_score}/550)',
                 'breakdown': breakdown
             }
 
