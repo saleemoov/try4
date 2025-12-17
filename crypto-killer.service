@@ -1,0 +1,16 @@
+[Unit]
+Description=Crypto Killer Trading Bot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/try4
+ExecStart=/usr/bin/python3 -u /root/try4/crypto_killer_bot.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/root/try4/crypto_killer.log
+StandardError=append:/root/try4/crypto_killer.log
+
+[Install]
+WantedBy=multi-user.target

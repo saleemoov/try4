@@ -1,0 +1,223 @@
+nohup: ignoring input
+2025-12-14 19:11:12,433 - root - INFO - 🚀 تم تهيئة البوت بنجاح
+2025-12-14 19:11:12,435 - root - INFO - 🚀 بدء حلقة المراقبة الرئيسية
+2025-12-14 19:11:12,435 - root - INFO - 
+======================================================================
+2025-12-14 19:11:12,435 - root - INFO - 📊 جلب قائمة العملات الجديدة...
+2025-12-14 19:11:15,638 - root - INFO - ✅ تم جلب 11 عملة
+2025-12-14 19:11:15,638 - root - INFO - 
+[1/11] 📊 تحليل BTC/USDT...
+2025-12-14 19:11:15,639 - root - INFO - 
+[2/11] 📊 تحليل ETH/USDT...
+2025-12-14 19:11:15,639 - root - INFO - 
+[3/11] 📊 تحليل SOL/USDT...
+2025-12-14 19:11:15,640 - root - INFO - 
+[4/11] 📊 تحليل NIGHT/USDT...
+2025-12-14 19:11:15,641 - root - INFO - 
+[5/11] 📊 تحليل DOGE/USDT...
+2025-12-14 19:11:15,641 - root - INFO - 
+[6/11] 📊 تحليل XPL/USDT...
+2025-12-14 19:11:15,641 - root - INFO - 
+[7/11] 📊 تحليل SUI/USDT...
+2025-12-14 19:11:15,641 - root - INFO - 
+[8/11] 📊 تحليل XRP/USDT...
+2025-12-14 19:11:15,642 - root - INFO - 
+[9/11] 📊 تحليل CORE/USDT...
+2025-12-14 19:11:15,642 - root - INFO - 
+[10/11] 📊 تحليل ZEC/USDT...
+2025-12-14 19:11:16,581 - root - INFO - 📊 XPL/USDT: SELL (قوة: 24%) - ضعيفة
+2025-12-14 19:11:16,600 - root - INFO - 📊 SUI/USDT: SELL (قوة: 31%) - ضعيفة
+2025-12-14 19:11:16,621 - root - INFO - 
+[11/11] 📊 تحليل WET/USDT...
+2025-12-14 19:11:16,635 - root - INFO - 📊 BTC/USDT: NEUTRAL (قوة: 48%) - ضعيفة
+2025-12-14 19:11:16,652 - root - INFO - 📊 ZEC/USDT: NEUTRAL (قوة: 42%) - ضعيفة
+2025-12-14 19:11:16,694 - root - INFO - 📊 XRP/USDT: SELL (قوة: 20%) - ضعيفة
+2025-12-14 19:11:16,718 - root - INFO - 📊 ETH/USDT: NEUTRAL (قوة: 69%) - ضعيفة
+2025-12-14 19:11:16,725 - root - INFO - 📊 SOL/USDT: NEUTRAL (قوة: 48%) - ضعيفة
+2025-12-14 19:11:16,736 - root - INFO - 📊 CORE/USDT: NEUTRAL (قوة: 56%) - ضعيفة
+2025-12-14 19:11:16,738 - root - INFO - 📊 DOGE/USDT: SELL (قوة: 17%) - ضعيفة
+2025-12-14 19:11:17,161 - root - INFO - ⏳ الانتظار 300 ثانية...
+2025-12-14 19:16:17,161 - root - INFO - 
+======================================================================
+2025-12-14 19:16:17,162 - root - INFO - 📊 جلب قائمة العملات الجديدة...
+2025-12-14 19:16:27,167 - root - WARNING - ⚠️ fetch_markets/tickers failed (attempt 1/3): okx GET https://www.okx.com/api/v5/public/instruments?instType=SPOT; retrying in 1.0s
+2025-12-14 19:16:29,712 - root - INFO - ✅ تم جلب 11 عملة
+2025-12-14 19:16:29,713 - root - INFO - 
+[1/11] 📊 تحليل BTC/USDT...
+2025-12-14 19:16:29,713 - root - INFO - 
+[2/11] 📊 تحليل ETH/USDT...
+2025-12-14 19:16:29,714 - root - INFO - 
+[3/11] 📊 تحليل SOL/USDT...
+2025-12-14 19:16:29,714 - root - INFO - 
+[4/11] 📊 تحليل NIGHT/USDT...
+2025-12-14 19:16:29,715 - root - INFO - 
+[5/11] 📊 تحليل DOGE/USDT...
+2025-12-14 19:16:29,715 - root - INFO - 
+[6/11] 📊 تحليل XPL/USDT...
+2025-12-14 19:16:29,716 - root - INFO - 
+[7/11] 📊 تحليل SUI/USDT...
+2025-12-14 19:16:29,716 - root - INFO - 
+[8/11] 📊 تحليل XRP/USDT...
+2025-12-14 19:16:29,716 - root - INFO - 
+[9/11] 📊 تحليل CORE/USDT...
+2025-12-14 19:16:29,717 - root - INFO - 
+[10/11] 📊 تحليل ZEC/USDT...
+2025-12-14 19:16:30,154 - root - INFO - 📊 BTC/USDT: NEUTRAL (قوة: 42%) - ضعيفة
+2025-12-14 19:16:30,155 - root - INFO - 
+[11/11] 📊 تحليل WET/USDT...
+2025-12-14 19:16:39,782 - root - WARNING - ⚠️ fetch_ohlcv ETH/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:16:39,782 - root - WARNING - ⚠️ fetch_ohlcv XRP/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:16:39,782 - root - WARNING - ⚠️ fetch_ohlcv DOGE/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:16:39,783 - root - WARNING - ⚠️ fetch_ohlcv SOL/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:16:39,784 - root - WARNING - ⚠️ fetch_ohlcv SUI/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:16:39,785 - root - WARNING - ⚠️ fetch_ohlcv NIGHT/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:16:39,786 - root - WARNING - ⚠️ fetch_ohlcv CORE/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:16:39,786 - root - WARNING - ⚠️ fetch_ohlcv XPL/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:16:39,786 - root - WARNING - ⚠️ fetch_ohlcv ZEC/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=ZEC-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:16:41,271 - root - INFO - 📊 ETH/USDT: NEUTRAL (قوة: 69%) - ضعيفة
+2025-12-14 19:16:41,344 - root - INFO - 📊 XRP/USDT: NEUTRAL (قوة: 44%) - ضعيفة
+2025-12-14 19:16:41,433 - root - INFO - 📊 ZEC/USDT: SELL (قوة: 39%) - ضعيفة
+2025-12-14 19:16:41,500 - root - INFO - 📊 CORE/USDT: NEUTRAL (قوة: 56%) - ضعيفة
+2025-12-14 19:16:41,524 - root - INFO - 📊 SUI/USDT: SELL (قوة: 31%) - ضعيفة
+2025-12-14 19:16:41,574 - root - INFO - 📊 DOGE/USDT: SELL (قوة: 18%) - ضعيفة
+2025-12-14 19:16:41,598 - root - INFO - 📊 SOL/USDT: NEUTRAL (قوة: 48%) - ضعيفة
+2025-12-14 19:16:41,623 - root - INFO - 📊 XPL/USDT: SELL (قوة: 24%) - ضعيفة
+2025-12-14 19:16:41,635 - root - INFO - ⏳ الانتظار 300 ثانية...
+2025-12-14 19:21:41,636 - root - INFO - 
+======================================================================
+2025-12-14 19:21:41,636 - root - INFO - 📊 جلب قائمة العملات الجديدة...
+2025-12-14 19:21:51,647 - root - WARNING - ⚠️ fetch_markets/tickers failed (attempt 1/3): okx GET https://www.okx.com/api/v5/public/instruments?instType=SPOT; retrying in 1.0s
+2025-12-14 19:21:54,098 - root - INFO - ✅ تم جلب 11 عملة
+2025-12-14 19:21:54,099 - root - INFO - 
+[1/11] 📊 تحليل BTC/USDT...
+2025-12-14 19:21:54,099 - root - INFO - 
+[2/11] 📊 تحليل ETH/USDT...
+2025-12-14 19:21:54,101 - root - INFO - 
+[3/11] 📊 تحليل SOL/USDT...
+2025-12-14 19:21:54,101 - root - INFO - 
+[4/11] 📊 تحليل NIGHT/USDT...
+2025-12-14 19:21:54,101 - root - INFO - 
+[5/11] 📊 تحليل DOGE/USDT...
+2025-12-14 19:21:54,101 - root - INFO - 
+[6/11] 📊 تحليل XPL/USDT...
+2025-12-14 19:21:54,102 - root - INFO - 
+[7/11] 📊 تحليل SUI/USDT...
+2025-12-14 19:21:54,102 - root - INFO - 
+[8/11] 📊 تحليل XRP/USDT...
+2025-12-14 19:21:54,102 - root - INFO - 
+[9/11] 📊 تحليل CORE/USDT...
+2025-12-14 19:21:54,103 - root - INFO - 
+[10/11] 📊 تحليل ZEC/USDT...
+2025-12-14 19:21:54,538 - root - INFO - 📊 BTC/USDT: SELL (قوة: 36%) - ضعيفة
+2025-12-14 19:21:54,539 - root - INFO - 
+[11/11] 📊 تحليل WET/USDT...
+2025-12-14 19:22:04,169 - root - WARNING - ⚠️ fetch_ohlcv DOGE/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:22:04,169 - root - WARNING - ⚠️ fetch_ohlcv CORE/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:22:04,170 - root - WARNING - ⚠️ fetch_ohlcv XPL/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:22:04,170 - root - WARNING - ⚠️ fetch_ohlcv XRP/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:22:04,170 - root - WARNING - ⚠️ fetch_ohlcv SOL/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:22:04,170 - root - WARNING - ⚠️ fetch_ohlcv SUI/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:22:04,170 - root - WARNING - ⚠️ fetch_ohlcv ZEC/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=ZEC-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:22:04,171 - root - WARNING - ⚠️ fetch_ohlcv ETH/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:22:04,171 - root - WARNING - ⚠️ fetch_ohlcv NIGHT/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:22:05,806 - root - INFO - 📊 DOGE/USDT: SELL (قوة: 18%) - ضعيفة
+2025-12-14 19:22:06,030 - root - INFO - 📊 XPL/USDT: SELL (قوة: 24%) - ضعيفة
+2025-12-14 19:22:06,065 - root - INFO - 📊 CORE/USDT: NEUTRAL (قوة: 48%) - ضعيفة
+2025-12-14 19:22:06,072 - root - INFO - 📊 ETH/USDT: NEUTRAL (قوة: 69%) - ضعيفة
+2025-12-14 19:22:06,076 - root - INFO - 📊 ZEC/USDT: SELL (قوة: 39%) - ضعيفة
+2025-12-14 19:22:06,079 - root - INFO - 📊 XRP/USDT: SELL (قوة: 36%) - ضعيفة
+2025-12-14 19:22:06,846 - root - INFO - 📊 SOL/USDT: NEUTRAL (قوة: 48%) - ضعيفة
+2025-12-14 19:22:06,915 - root - INFO - 📊 SUI/USDT: SELL (قوة: 31%) - ضعيفة
+2025-12-14 19:22:06,916 - root - INFO - ⏳ الانتظار 300 ثانية...
+2025-12-14 19:27:06,916 - root - INFO - 
+======================================================================
+2025-12-14 19:27:06,917 - root - INFO - 📊 جلب قائمة العملات الجديدة...
+2025-12-14 19:27:16,928 - root - WARNING - ⚠️ fetch_markets/tickers failed (attempt 1/3): okx GET https://www.okx.com/api/v5/public/instruments?instType=SPOT; retrying in 1.0s
+2025-12-14 19:27:19,367 - root - INFO - ✅ تم جلب 11 عملة
+2025-12-14 19:27:19,368 - root - INFO - 
+[1/11] 📊 تحليل BTC/USDT...
+2025-12-14 19:27:19,369 - root - INFO - 
+[2/11] 📊 تحليل ETH/USDT...
+2025-12-14 19:27:19,370 - root - INFO - 
+[3/11] 📊 تحليل SOL/USDT...
+2025-12-14 19:27:19,371 - root - INFO - 
+[4/11] 📊 تحليل NIGHT/USDT...
+2025-12-14 19:27:19,372 - root - INFO - 
+[5/11] 📊 تحليل DOGE/USDT...
+2025-12-14 19:27:19,372 - root - INFO - 
+[6/11] 📊 تحليل XPL/USDT...
+2025-12-14 19:27:19,372 - root - INFO - 
+[7/11] 📊 تحليل SUI/USDT...
+2025-12-14 19:27:19,373 - root - INFO - 
+[8/11] 📊 تحليل XRP/USDT...
+2025-12-14 19:27:19,374 - root - INFO - 
+[9/11] 📊 تحليل CORE/USDT...
+2025-12-14 19:27:19,374 - root - INFO - 
+[10/11] 📊 تحليل ZEC/USDT...
+2025-12-14 19:27:19,810 - root - INFO - 📊 BTC/USDT: NEUTRAL (قوة: 42%) - ضعيفة
+2025-12-14 19:27:19,810 - root - INFO - 
+[11/11] 📊 تحليل WET/USDT...
+2025-12-14 19:27:29,438 - root - WARNING - ⚠️ fetch_ohlcv SUI/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:27:29,439 - root - WARNING - ⚠️ fetch_ohlcv CORE/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:27:29,439 - root - WARNING - ⚠️ fetch_ohlcv NIGHT/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:27:29,439 - root - WARNING - ⚠️ fetch_ohlcv SOL/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:27:29,439 - root - WARNING - ⚠️ fetch_ohlcv ZEC/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=ZEC-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:27:29,439 - root - WARNING - ⚠️ fetch_ohlcv ETH/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:27:29,439 - root - WARNING - ⚠️ fetch_ohlcv XPL/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:27:29,439 - root - WARNING - ⚠️ fetch_ohlcv XRP/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:27:29,439 - root - WARNING - ⚠️ fetch_ohlcv DOGE/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:27:30,954 - root - INFO - 📊 SUI/USDT: SELL (قوة: 31%) - ضعيفة
+2025-12-14 19:27:31,007 - root - INFO - 📊 SOL/USDT: NEUTRAL (قوة: 48%) - ضعيفة
+2025-12-14 19:27:31,152 - root - INFO - 📊 XRP/USDT: SELL (قوة: 20%) - ضعيفة
+2025-12-14 19:27:31,207 - root - INFO - 📊 ETH/USDT: NEUTRAL (قوة: 69%) - ضعيفة
+2025-12-14 19:27:31,233 - root - INFO - 📊 XPL/USDT: SELL (قوة: 9%) - ضعيفة
+2025-12-14 19:27:31,278 - root - INFO - 📊 CORE/USDT: NEUTRAL (قوة: 48%) - ضعيفة
+2025-12-14 19:27:31,288 - root - INFO - 📊 DOGE/USDT: SELL (قوة: 29%) - ضعيفة
+2025-12-14 19:27:31,319 - root - INFO - 📊 ZEC/USDT: NEUTRAL (قوة: 42%) - ضعيفة
+2025-12-14 19:27:31,327 - root - INFO - ⏳ الانتظار 300 ثانية...
+2025-12-14 19:32:31,327 - root - INFO - 
+======================================================================
+2025-12-14 19:32:31,328 - root - INFO - 📊 جلب قائمة العملات الجديدة...
+2025-12-14 19:32:41,335 - root - WARNING - ⚠️ fetch_markets/tickers failed (attempt 1/3): okx GET https://www.okx.com/api/v5/public/instruments?instType=SPOT; retrying in 1.0s
+2025-12-14 19:32:44,262 - root - INFO - ✅ تم جلب 11 عملة
+2025-12-14 19:32:44,265 - root - INFO - 
+[1/11] 📊 تحليل BTC/USDT...
+2025-12-14 19:32:44,270 - root - INFO - 
+[2/11] 📊 تحليل ETH/USDT...
+2025-12-14 19:32:44,280 - root - INFO - 
+[4/11] 📊 تحليل NIGHT/USDT...
+2025-12-14 19:32:44,276 - root - INFO - 
+[3/11] 📊 تحليل SOL/USDT...
+2025-12-14 19:32:44,290 - root - INFO - 
+[5/11] 📊 تحليل DOGE/USDT...
+2025-12-14 19:32:44,301 - root - INFO - 
+[6/11] 📊 تحليل XPL/USDT...
+2025-12-14 19:32:44,307 - root - INFO - 
+[9/11] 📊 تحليل CORE/USDT...
+2025-12-14 19:32:44,304 - root - INFO - 
+[8/11] 📊 تحليل XRP/USDT...
+2025-12-14 19:32:44,318 - root - INFO - 
+[10/11] 📊 تحليل ZEC/USDT...
+2025-12-14 19:32:44,303 - root - INFO - 
+[7/11] 📊 تحليل SUI/USDT...
+2025-12-14 19:32:44,728 - root - INFO - 📊 BTC/USDT: NEUTRAL (قوة: 48%) - ضعيفة
+2025-12-14 19:32:44,728 - root - INFO - 
+[11/11] 📊 تحليل WET/USDT...
+2025-12-14 19:32:54,334 - root - WARNING - ⚠️ fetch_ohlcv ETH/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:32:54,334 - root - WARNING - ⚠️ fetch_ohlcv SOL/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:32:54,334 - root - WARNING - ⚠️ fetch_ohlcv XRP/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:32:54,334 - root - WARNING - ⚠️ fetch_ohlcv XPL/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:32:54,334 - root - WARNING - ⚠️ fetch_ohlcv CORE/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:32:54,335 - root - WARNING - ⚠️ fetch_ohlcv ZEC/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=ZEC-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:32:54,335 - root - WARNING - ⚠️ fetch_ohlcv DOGE/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:32:54,341 - root - WARNING - ⚠️ fetch_ohlcv NIGHT/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:32:54,393 - root - WARNING - ⚠️ fetch_ohlcv SUI/USDT 4h failed (attempt 1/3): okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=4H&limit=100; retrying in 1.0s
+2025-12-14 19:32:55,813 - root - INFO - 📊 ETH/USDT: NEUTRAL (قوة: 69%) - ضعيفة
+2025-12-14 19:32:55,942 - root - INFO - 📊 ZEC/USDT: NEUTRAL (قوة: 42%) - ضعيفة
+2025-12-14 19:32:56,017 - root - INFO - 📊 XRP/USDT: SELL (قوة: 20%) - ضعيفة
+2025-12-14 19:32:56,035 - root - INFO - 📊 DOGE/USDT: SELL (قوة: 29%) - ضعيفة
+2025-12-14 19:32:56,060 - root - INFO - 📊 CORE/USDT: NEUTRAL (قوة: 56%) - ضعيفة
+2025-12-14 19:32:56,117 - root - INFO - 📊 XPL/USDT: SELL (قوة: 9%) - ضعيفة
+2025-12-14 19:32:56,155 - root - INFO - 📊 SOL/USDT: NEUTRAL (قوة: 48%) - ضعيفة
+2025-12-14 19:32:56,161 - root - INFO - 📊 SUI/USDT: SELL (قوة: 31%) - ضعيفة
+2025-12-14 19:32:56,162 - root - INFO - ⏳ الانتظار 300 ثانية...

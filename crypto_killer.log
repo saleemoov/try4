@@ -1,0 +1,295 @@
+nohup: ignoring input
+2025-12-14 19:48:22,260 - root - INFO - 💀 Crypto Killer Bot initialized!
+2025-12-14 19:48:22,454 - root - INFO - 🚀 Starting main loop...
+2025-12-14 19:48:22,454 - root - INFO - ============================================================
+2025-12-14 19:48:22,454 - root - INFO - 📊 Scanning market...
+2025-12-14 19:48:24,449 - root - INFO - ✅ Found 22 symbols
+2025-12-14 19:48:26,704 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 19:53:26,704 - root - INFO - ============================================================
+2025-12-14 19:53:26,705 - root - INFO - 📊 Scanning market...
+2025-12-14 19:53:36,715 - root - ERROR - Failed to fetch symbols: okx GET https://www.okx.com/api/v5/market/tickers?instType=SPOT
+2025-12-14 19:53:36,716 - root - INFO - ✅ Found 0 symbols
+2025-12-14 19:53:36,716 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 19:58:36,716 - root - INFO - ============================================================
+2025-12-14 19:58:36,716 - root - INFO - 📊 Scanning market...
+2025-12-14 19:58:37,015 - root - INFO - ✅ Found 22 symbols
+2025-12-14 19:58:47,081 - root - WARNING - ⚠️ USDC/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=USDC-USDT&bar=5m&limit=300
+2025-12-14 19:58:47,081 - root - WARNING - ⚠️ XPL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=5m&limit=300
+2025-12-14 19:58:47,081 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 19:58:47,081 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 19:58:47,084 - root - WARNING - ⚠️ CORE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=5m&limit=300
+2025-12-14 19:58:47,085 - root - WARNING - ⚠️ ETH/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=5m&limit=300
+2025-12-14 19:58:47,085 - root - WARNING - ⚠️ SUI/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=5m&limit=300
+2025-12-14 19:58:47,085 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 19:58:47,086 - root - WARNING - ⚠️ XRP/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=5m&limit=300
+2025-12-14 19:58:47,087 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 20:03:47,087 - root - INFO - ============================================================
+2025-12-14 20:03:47,087 - root - INFO - 📊 Scanning market...
+2025-12-14 20:03:47,391 - root - INFO - ✅ Found 22 symbols
+2025-12-14 20:03:57,466 - root - WARNING - ⚠️ CORE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=5m&limit=300
+2025-12-14 20:03:57,467 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 20:08:57,467 - root - INFO - ============================================================
+2025-12-14 20:08:57,468 - root - INFO - 📊 Scanning market...
+2025-12-14 20:08:57,818 - root - INFO - ✅ Found 22 symbols
+2025-12-14 20:09:07,880 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 20:09:07,880 - root - WARNING - ⚠️ SUI/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=5m&limit=300
+2025-12-14 20:09:07,880 - root - WARNING - ⚠️ CORE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=5m&limit=300
+2025-12-14 20:09:07,880 - root - WARNING - ⚠️ USDC/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=USDC-USDT&bar=5m&limit=300
+2025-12-14 20:09:07,880 - root - WARNING - ⚠️ XRP/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=5m&limit=300
+2025-12-14 20:09:07,880 - root - WARNING - ⚠️ ETH/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=5m&limit=300
+2025-12-14 20:09:07,880 - root - WARNING - ⚠️ XPL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=5m&limit=300
+2025-12-14 20:09:07,880 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 20:09:07,889 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 20:09:07,890 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 20:14:07,891 - root - INFO - ============================================================
+2025-12-14 20:14:07,891 - root - INFO - 📊 Scanning market...
+2025-12-14 20:14:08,183 - root - INFO - ✅ Found 22 symbols
+2025-12-14 20:14:18,256 - root - WARNING - ⚠️ USDC/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=USDC-USDT&bar=5m&limit=300
+2025-12-14 20:14:18,257 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 20:19:18,257 - root - INFO - ============================================================
+2025-12-14 20:19:18,258 - root - INFO - 📊 Scanning market...
+2025-12-14 20:19:18,748 - root - INFO - ✅ Found 22 symbols
+2025-12-14 20:19:20,103 - root - INFO - 📊 ADA/USDT: 220/400 (55.0%) - قريب
+2025-12-14 20:19:28,817 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 20:19:28,817 - root - WARNING - ⚠️ XRP/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=5m&limit=300
+2025-12-14 20:19:28,817 - root - WARNING - ⚠️ XPL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=5m&limit=300
+2025-12-14 20:19:28,818 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 20:19:28,818 - root - WARNING - ⚠️ USDC/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=USDC-USDT&bar=5m&limit=300
+2025-12-14 20:19:28,818 - root - WARNING - ⚠️ CORE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=5m&limit=300
+2025-12-14 20:19:28,818 - root - WARNING - ⚠️ SUI/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=5m&limit=300
+2025-12-14 20:19:28,818 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 20:19:28,819 - root - WARNING - ⚠️ ETH/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=5m&limit=300
+2025-12-14 20:19:28,820 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 20:24:28,820 - root - INFO - ============================================================
+2025-12-14 20:24:28,821 - root - INFO - 📊 Scanning market...
+2025-12-14 20:24:29,119 - root - INFO - ✅ Found 22 symbols
+2025-12-14 20:24:39,192 - root - WARNING - ⚠️ USDC/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=USDC-USDT&bar=5m&limit=300
+2025-12-14 20:24:39,193 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 20:29:39,193 - root - INFO - ============================================================
+2025-12-14 20:29:39,194 - root - INFO - 📊 Scanning market...
+2025-12-14 20:29:39,509 - root - INFO - ✅ Found 22 symbols
+2025-12-14 20:29:49,578 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 20:29:49,579 - root - WARNING - ⚠️ CORE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=5m&limit=300
+2025-12-14 20:29:49,579 - root - WARNING - ⚠️ ETH/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=5m&limit=300
+2025-12-14 20:29:49,580 - root - WARNING - ⚠️ SUI/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=5m&limit=300
+2025-12-14 20:29:49,580 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 20:29:49,580 - root - WARNING - ⚠️ USDC/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=USDC-USDT&bar=5m&limit=300
+2025-12-14 20:29:49,581 - root - WARNING - ⚠️ XPL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=5m&limit=300
+2025-12-14 20:29:49,581 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 20:29:49,581 - root - WARNING - ⚠️ XRP/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=5m&limit=300
+2025-12-14 20:29:49,582 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 20:34:49,583 - root - INFO - ============================================================
+2025-12-14 20:34:49,583 - root - INFO - 📊 Scanning market...
+2025-12-14 20:34:49,881 - root - INFO - ✅ Found 22 symbols
+2025-12-14 20:34:59,951 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 20:34:59,952 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 20:39:59,953 - root - INFO - ============================================================
+2025-12-14 20:39:59,953 - root - INFO - 📊 Scanning market...
+2025-12-14 20:40:00,242 - root - INFO - ✅ Found 22 symbols
+2025-12-14 20:40:10,311 - root - WARNING - ⚠️ XPL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=5m&limit=300
+2025-12-14 20:40:10,311 - root - WARNING - ⚠️ SUI/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=5m&limit=300
+2025-12-14 20:40:10,311 - root - WARNING - ⚠️ XRP/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=5m&limit=300
+2025-12-14 20:40:10,311 - root - WARNING - ⚠️ USDC/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=USDC-USDT&bar=5m&limit=300
+2025-12-14 20:40:10,312 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 20:40:10,312 - root - WARNING - ⚠️ CORE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=5m&limit=300
+2025-12-14 20:40:10,312 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 20:40:10,312 - root - WARNING - ⚠️ ETH/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=5m&limit=300
+2025-12-14 20:40:10,313 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 20:40:10,314 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 20:45:10,315 - root - INFO - ============================================================
+2025-12-14 20:45:10,315 - root - INFO - 📊 Scanning market...
+2025-12-14 20:45:10,604 - root - INFO - ✅ Found 22 symbols
+2025-12-14 20:45:20,677 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 20:45:20,678 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 20:50:20,678 - root - INFO - ============================================================
+2025-12-14 20:50:20,679 - root - INFO - 📊 Scanning market...
+2025-12-14 20:50:20,967 - root - INFO - ✅ Found 22 symbols
+2025-12-14 20:50:31,035 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 20:50:31,036 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 20:50:31,037 - root - WARNING - ⚠️ XPL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=5m&limit=300
+2025-12-14 20:50:31,038 - root - WARNING - ⚠️ USDC/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=USDC-USDT&bar=5m&limit=300
+2025-12-14 20:50:31,038 - root - WARNING - ⚠️ SUI/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=5m&limit=300
+2025-12-14 20:50:31,039 - root - WARNING - ⚠️ ETH/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=5m&limit=300
+2025-12-14 20:50:31,039 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 20:50:31,039 - root - WARNING - ⚠️ XRP/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=5m&limit=300
+2025-12-14 20:50:31,040 - root - WARNING - ⚠️ CORE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=5m&limit=300
+2025-12-14 20:50:31,041 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 20:55:31,041 - root - INFO - ============================================================
+2025-12-14 20:55:31,041 - root - INFO - 📊 Scanning market...
+2025-12-14 20:55:31,735 - root - INFO - ✅ Found 22 symbols
+2025-12-14 20:55:41,809 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 20:55:41,811 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 21:00:41,811 - root - INFO - ============================================================
+2025-12-14 21:00:41,811 - root - INFO - 📊 Scanning market...
+2025-12-14 21:00:42,109 - root - INFO - ✅ Found 22 symbols
+2025-12-14 21:00:52,179 - root - WARNING - ⚠️ USDC/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=USDC-USDT&bar=5m&limit=300
+2025-12-14 21:00:52,179 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 21:00:52,179 - root - WARNING - ⚠️ ETH/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=5m&limit=300
+2025-12-14 21:00:52,179 - root - WARNING - ⚠️ SUI/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=5m&limit=300
+2025-12-14 21:00:52,179 - root - WARNING - ⚠️ XPL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=5m&limit=300
+2025-12-14 21:00:52,180 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 21:00:52,180 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 21:00:52,180 - root - WARNING - ⚠️ XRP/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=5m&limit=300
+2025-12-14 21:00:52,181 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 21:05:52,182 - root - INFO - ============================================================
+2025-12-14 21:05:52,182 - root - INFO - 📊 Scanning market...
+2025-12-14 21:05:52,541 - root - INFO - ✅ Found 22 symbols
+2025-12-14 21:06:02,612 - root - WARNING - ⚠️ XPL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=5m&limit=300
+2025-12-14 21:06:02,614 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 21:06:02,616 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 21:11:02,616 - root - INFO - ============================================================
+2025-12-14 21:11:02,617 - root - INFO - 📊 Scanning market...
+2025-12-14 21:11:02,914 - root - INFO - ✅ Found 22 symbols
+2025-12-14 21:11:12,985 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 21:11:12,985 - root - WARNING - ⚠️ ETH/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=5m&limit=300
+2025-12-14 21:11:12,985 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 21:11:12,985 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 21:11:12,985 - root - WARNING - ⚠️ CORE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=5m&limit=300
+2025-12-14 21:11:12,986 - root - WARNING - ⚠️ USDC/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=USDC-USDT&bar=5m&limit=300
+2025-12-14 21:11:12,986 - root - WARNING - ⚠️ XPL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=5m&limit=300
+2025-12-14 21:11:12,986 - root - WARNING - ⚠️ SUI/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=5m&limit=300
+2025-12-14 21:11:12,987 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 21:16:12,988 - root - INFO - ============================================================
+2025-12-14 21:16:12,988 - root - INFO - 📊 Scanning market...
+2025-12-14 21:16:13,304 - root - INFO - ✅ Found 22 symbols
+2025-12-14 21:16:23,375 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 21:16:23,376 - root - WARNING - ⚠️ XPL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=5m&limit=300
+2025-12-14 21:16:23,377 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 21:21:23,377 - root - INFO - ============================================================
+2025-12-14 21:21:23,381 - root - INFO - 📊 Scanning market...
+2025-12-14 21:21:23,871 - root - INFO - ✅ Found 22 symbols
+2025-12-14 21:21:33,939 - root - WARNING - ⚠️ XRP/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=5m&limit=300
+2025-12-14 21:21:33,940 - root - WARNING - ⚠️ CORE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=5m&limit=300
+2025-12-14 21:21:33,941 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 21:21:33,941 - root - WARNING - ⚠️ ETH/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=5m&limit=300
+2025-12-14 21:21:33,942 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 21:21:33,942 - root - WARNING - ⚠️ USDC/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=USDC-USDT&bar=5m&limit=300
+2025-12-14 21:21:33,943 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 21:21:33,944 - root - WARNING - ⚠️ XPL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=5m&limit=300
+2025-12-14 21:21:33,945 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 21:26:33,945 - root - INFO - ============================================================
+2025-12-14 21:26:33,945 - root - INFO - 📊 Scanning market...
+2025-12-14 21:26:34,249 - root - INFO - ✅ Found 22 symbols
+2025-12-14 21:26:44,322 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 21:26:44,322 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 21:26:44,324 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 21:31:44,324 - root - INFO - ============================================================
+2025-12-14 21:31:44,324 - root - INFO - 📊 Scanning market...
+2025-12-14 21:31:44,626 - root - INFO - ✅ Found 22 symbols
+2025-12-14 21:31:54,695 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 21:31:54,696 - root - WARNING - ⚠️ SUI/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=5m&limit=300
+2025-12-14 21:31:54,695 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 21:31:54,696 - root - WARNING - ⚠️ ETH/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=5m&limit=300
+2025-12-14 21:31:54,696 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 21:31:54,696 - root - WARNING - ⚠️ USDC/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=USDC-USDT&bar=5m&limit=300
+2025-12-14 21:31:54,696 - root - WARNING - ⚠️ CORE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=5m&limit=300
+2025-12-14 21:31:54,696 - root - WARNING - ⚠️ XRP/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=5m&limit=300
+2025-12-14 21:31:54,698 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 21:36:54,698 - root - INFO - ============================================================
+2025-12-14 21:36:54,699 - root - INFO - 📊 Scanning market...
+2025-12-14 21:36:54,997 - root - INFO - ✅ Found 22 symbols
+2025-12-14 21:37:05,069 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 21:37:05,069 - root - WARNING - ⚠️ USDC/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=USDC-USDT&bar=5m&limit=300
+2025-12-14 21:37:05,070 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 21:42:05,071 - root - INFO - ============================================================
+2025-12-14 21:42:05,071 - root - INFO - 📊 Scanning market...
+2025-12-14 21:42:05,383 - root - INFO - ✅ Found 22 symbols
+2025-12-14 21:42:15,454 - root - WARNING - ⚠️ SUI/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=5m&limit=300
+2025-12-14 21:42:15,454 - root - WARNING - ⚠️ XRP/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=5m&limit=300
+2025-12-14 21:42:15,454 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 21:42:15,454 - root - WARNING - ⚠️ CORE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=5m&limit=300
+2025-12-14 21:42:15,454 - root - WARNING - ⚠️ USDC/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=USDC-USDT&bar=5m&limit=300
+2025-12-14 21:42:15,454 - root - WARNING - ⚠️ ETH/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=5m&limit=300
+2025-12-14 21:42:15,454 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 21:42:15,454 - root - WARNING - ⚠️ XPL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=5m&limit=300
+2025-12-14 21:42:15,456 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 21:47:15,456 - root - INFO - ============================================================
+2025-12-14 21:47:15,457 - root - INFO - 📊 Scanning market...
+2025-12-14 21:47:15,781 - root - INFO - ✅ Found 22 symbols
+2025-12-14 21:47:25,856 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 21:47:25,857 - root - WARNING - ⚠️ SUI/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=5m&limit=300
+2025-12-14 21:47:25,987 - root - WARNING - ⚠️ CORE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=5m&limit=300
+2025-12-14 21:47:25,988 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 21:52:25,988 - root - INFO - ============================================================
+2025-12-14 21:52:25,989 - root - INFO - 📊 Scanning market...
+2025-12-14 21:52:26,655 - root - INFO - ✅ Found 22 symbols
+2025-12-14 21:52:36,725 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 21:52:36,725 - root - WARNING - ⚠️ USDC/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=USDC-USDT&bar=5m&limit=300
+2025-12-14 21:52:36,730 - root - WARNING - ⚠️ SUI/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=5m&limit=300
+2025-12-14 21:52:36,730 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 21:52:36,731 - root - WARNING - ⚠️ XPL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=5m&limit=300
+2025-12-14 21:52:36,731 - root - WARNING - ⚠️ XRP/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=5m&limit=300
+2025-12-14 21:52:36,731 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 21:52:36,732 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 21:57:36,732 - root - INFO - ============================================================
+2025-12-14 21:57:36,733 - root - INFO - 📊 Scanning market...
+2025-12-14 21:57:37,028 - root - INFO - ✅ Found 23 symbols
+2025-12-14 21:57:47,101 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 21:57:47,101 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 21:57:47,102 - root - WARNING - ⚠️ CORE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=5m&limit=300
+2025-12-14 21:57:47,103 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 22:02:47,103 - root - INFO - ============================================================
+2025-12-14 22:02:47,104 - root - INFO - 📊 Scanning market...
+2025-12-14 22:02:47,423 - root - INFO - ✅ Found 23 symbols
+2025-12-14 22:02:57,493 - root - WARNING - ⚠️ ETH/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=5m&limit=300
+2025-12-14 22:02:57,493 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 22:02:57,493 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 22:02:57,494 - root - WARNING - ⚠️ XRP/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=5m&limit=300
+2025-12-14 22:02:57,494 - root - WARNING - ⚠️ XPL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=5m&limit=300
+2025-12-14 22:02:57,494 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 22:02:57,494 - root - WARNING - ⚠️ SUI/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=5m&limit=300
+2025-12-14 22:02:57,495 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 22:07:57,496 - root - INFO - ============================================================
+2025-12-14 22:07:57,496 - root - INFO - 📊 Scanning market...
+2025-12-14 22:07:57,792 - root - INFO - ✅ Found 23 symbols
+2025-12-14 22:08:07,863 - root - WARNING - ⚠️ SUI/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=5m&limit=300
+2025-12-14 22:08:07,865 - root - WARNING - ⚠️ XPL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=5m&limit=300
+2025-12-14 22:08:07,865 - root - WARNING - ⚠️ USDC/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=USDC-USDT&bar=5m&limit=300
+2025-12-14 22:08:07,866 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 22:13:07,867 - root - INFO - ============================================================
+2025-12-14 22:13:07,867 - root - INFO - 📊 Scanning market...
+2025-12-14 22:13:08,255 - root - INFO - ✅ Found 23 symbols
+2025-12-14 22:13:18,321 - root - WARNING - ⚠️ XPL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=5m&limit=300
+2025-12-14 22:13:18,321 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 22:13:18,322 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 22:13:18,325 - root - WARNING - ⚠️ XRP/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=5m&limit=300
+2025-12-14 22:13:18,328 - root - WARNING - ⚠️ CORE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=5m&limit=300
+2025-12-14 22:13:18,328 - root - WARNING - ⚠️ ETH/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=5m&limit=300
+2025-12-14 22:13:18,329 - root - WARNING - ⚠️ SUI/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=5m&limit=300
+2025-12-14 22:13:18,331 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 22:18:18,331 - root - INFO - ============================================================
+2025-12-14 22:18:18,331 - root - INFO - 📊 Scanning market...
+2025-12-14 22:18:18,651 - root - INFO - ✅ Found 23 symbols
+2025-12-14 22:18:28,723 - root - WARNING - ⚠️ XRP/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=5m&limit=300
+2025-12-14 22:18:28,723 - root - WARNING - ⚠️ SUI/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=5m&limit=300
+2025-12-14 22:18:28,724 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 22:18:28,725 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 22:23:28,725 - root - INFO - ============================================================
+2025-12-14 22:23:28,725 - root - INFO - 📊 Scanning market...
+2025-12-14 22:23:29,042 - root - INFO - ✅ Found 23 symbols
+2025-12-14 22:23:39,111 - root - WARNING - ⚠️ ETH/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=5m&limit=300
+2025-12-14 22:23:39,111 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 22:23:39,111 - root - WARNING - ⚠️ XPL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XPL-USDT&bar=5m&limit=300
+2025-12-14 22:23:39,112 - root - WARNING - ⚠️ CORE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=5m&limit=300
+2025-12-14 22:23:39,112 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 22:23:39,112 - root - WARNING - ⚠️ XRP/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=5m&limit=300
+2025-12-14 22:23:39,112 - root - WARNING - ⚠️ USDC/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=USDC-USDT&bar=5m&limit=300
+2025-12-14 22:23:39,115 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 22:28:39,115 - root - INFO - ============================================================
+2025-12-14 22:28:39,115 - root - INFO - 📊 Scanning market...
+2025-12-14 22:28:39,436 - root - INFO - ✅ Found 23 symbols
+2025-12-14 22:28:49,502 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 22:28:49,503 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 22:28:49,509 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 22:28:49,510 - root - INFO - ⏳ Waiting 300s...
+2025-12-14 22:33:49,511 - root - INFO - ============================================================
+2025-12-14 22:33:49,511 - root - INFO - 📊 Scanning market...
+2025-12-14 22:33:49,841 - root - INFO - ✅ Found 23 symbols
+2025-12-14 22:33:59,910 - root - WARNING - ⚠️ DOGE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=DOGE-USDT&bar=5m&limit=300
+2025-12-14 22:33:59,912 - root - WARNING - ⚠️ CORE/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=CORE-USDT&bar=5m&limit=300
+2025-12-14 22:33:59,913 - root - WARNING - ⚠️ ETH/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=ETH-USDT&bar=5m&limit=300
+2025-12-14 22:33:59,913 - root - WARNING - ⚠️ SOL/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SOL-USDT&bar=5m&limit=300
+2025-12-14 22:33:59,913 - root - WARNING - ⚠️ SUI/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=SUI-USDT&bar=5m&limit=300
+2025-12-14 22:33:59,914 - root - WARNING - ⚠️ XRP/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=XRP-USDT&bar=5m&limit=300
+2025-12-14 22:33:59,914 - root - WARNING - ⚠️ NIGHT/USDT analysis failed: okx GET https://www.okx.com/api/v5/market/candles?instId=NIGHT-USDT&bar=5m&limit=300
+2025-12-14 22:33:59,916 - root - INFO - ⏳ Waiting 300s...

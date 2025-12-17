@@ -1,0 +1,18 @@
+# Systemd service template for advanced_trading_bot
+# Replace {{USER}} and {{WORKDIR}} before using or let deploy script create it
+[Unit]
+Description=Advanced Trading Bot
+After=network.target
+
+[Service]
+Type=simple
+User={{USER}}
+WorkingDirectory={{WORKDIR}}
+Environment=PYTHONUNBUFFERED=1
+ExecStart={{WORKDIR}}/venv/bin/python3 {{WORKDIR}}/advanced_trading_bot.py
+Restart=always
+RestartSec=10
+StartLimitIntervalSec=0
+
+[Install]
+WantedBy=multi-user.target

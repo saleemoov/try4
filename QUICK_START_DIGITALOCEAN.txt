@@ -1,0 +1,164 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+💀 Crypto Killer - دليل النشر السريع على DigitalOcean
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⏱️  الوقت الكلي: 10-15 دقيقة
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+الخطوة 1: إنشاء Droplet (3 دقائق)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. اذهب إلى: https://cloud.digitalocean.com
+2. Create → Droplets
+3. اختر:
+   Image: Ubuntu 22.04 LTS
+   Plan: $6/month (1GB RAM)
+   Datacenter: أقرب منطقة لك
+   Authentication: Password (أسهل)
+   
+4. انقر "Create Droplet"
+5. انتظر دقيقة
+6. احفظ IP Address (مثال: 159.89.123.45)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+الخطوة 2: الاتصال بالسيرفر (1 دقيقة)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# من Terminal/CMD
+ssh root@YOUR_IP
+
+# أدخل الـ Password الذي وصلك بالإيميل
+# (إذا سأل yes/no، اكتب yes)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+الخطوة 3: التثبيت التلقائي (5 دقائق)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# نسخ هذه الأوامر في السيرفر (بالترتيب):
+
+# 1. تحديث النظام
+apt update && apt install -y python3 python3-pip git
+
+# 2. استنساخ المشروع
+cd /root
+git clone https://github.com/saleemoov/try4.git
+cd try4
+
+# 3. تثبيت المكتبات
+pip3 install ccxt pandas numpy requests python-dotenv
+
+# 4. تحرير ملف الإعدادات (مهم!)
+nano trading_config.json
+
+# الصق هذا المحتوى (عدّل البيانات):
+{
+  "okx": {
+    "api_key": "YOUR_OKX_API_KEY",
+    "api_secret": "YOUR_OKX_SECRET",
+    "passphrase": "YOUR_OKX_PASSPHRASE"
+  },
+  "telegram": {
+    "bot_token": "YOUR_TELEGRAM_BOT_TOKEN",
+    "chat_id": "YOUR_TELEGRAM_CHAT_ID"
+  }
+}
+
+# احفظ: Ctrl+X ثم Y ثم Enter
+
+# 5. اختبار سريع
+python3 crypto_killer_bot.py
+# إذا ظهرت رسائل مثل "💀 Crypto Killer Bot initialized" = ممتاز!
+# اضغط Ctrl+C لإيقافه
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+الخطوة 4: التشغيل الدائم (3 دقائق)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# إنشاء خدمة systemd
+nano /etc/systemd/system/crypto-killer.service
+
+# الصق هذا المحتوى:
+[Unit]
+Description=Crypto Killer Trading Bot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/try4
+ExecStart=/usr/bin/python3 -u /root/try4/crypto_killer_bot.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/root/try4/crypto_killer.log
+StandardError=append:/root/try4/crypto_killer.log
+
+[Install]
+WantedBy=multi-user.target
+
+# احفظ: Ctrl+X ثم Y ثم Enter
+
+# تفعيل وبدء الخدمة
+systemctl daemon-reload
+systemctl enable crypto-killer
+systemctl start crypto-killer
+
+# التحقق
+./deploy_now.sh# يجب أن ترى: Active: active (running) ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+الخطوة 5: المراقبة (مستمرة)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# عرض السجل مباشرة
+tail -f /root/try4/crypto_killer.log
+
+# (اضغط Ctrl+C للخروج من المراقبة)
+
+# يمكنك الآن الخروج من السيرفر
+exit
+
+# البوت سيستمر بالعمل 24/7! ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+أوامر مفيدة للإدارة
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# للرجوع للسيرفر
+ssh root@YOUR_IP
+
+# مراقبة السجل
+tail -f /root/try4/crypto_killer.log
+
+# إعادة تشغيل البوت
+systemctl restart crypto-killer
+
+# إيقاف البوت
+systemctl stop crypto-killer
+
+# بدء البوت
+systemctl start crypto-killer
+
+# حالة البوت
+systemctl status crypto-killer
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Checklist النهائي
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Droplet تم إنشاؤه على DigitalOcean
+□ اتصلت بالسيرفر عبر SSH
+□ ثبّت Python والمكتبات
+□ رفعت crypto_killer_bot.py
+□ حررت trading_config.json بمفاتيح OKX و Telegram
+□ اختبرت البوت يدوياً (يعمل)
+□ أنشأت systemd service
+□ البوت يعمل: systemctl status crypto-killer
+□ وصلتك رسالة "💀 Crypto Killer Bot Started!" على Telegram
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔥 تم! البوت الآن يعمل 24/7 على DigitalOcean
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💀 Crypto Killer is Hunting!
+
+للدعم: راجع DIGITALOCEAN_SETUP.md للتفاصيل الكاملة
