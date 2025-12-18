@@ -71,3 +71,29 @@
 2025-12-18 05:00:18,808 - INFO - ✅ Alert sent for WLFI/USDT
 2025-12-18 05:00:18,832 - INFO - ✅ Alert sent for TON/USDT
 2025-12-18 05:00:18,834 - INFO - ⏳ Waiting 300s...
+2025-12-18 05:16:58,917 - INFO - 🚀 Crypto Adaptive Bot v3.0 initialized!
+2025-12-18 05:16:58,918 - INFO - 🔥 Starting adaptive market scanning...
+2025-12-18 05:16:58,918 - INFO - ============================================================
+2025-12-18 05:16:58,918 - INFO - 📊 Scanning market...
+2025-12-18 05:17:01,053 - INFO - ✅ Found 30 symbols
+2025-12-18 05:17:01,316 - INFO - 🔥 ETH/USDT [RANGE]: BUY! Score 220/400 (55.0%)
+2025-12-18 05:17:01,417 - INFO - ✅ Alert sent for ETH/USDT
+2025-12-18 05:17:01,521 - INFO - 🔥 SOL/USDT [RANGE]: BUY! Score 200/400 (50.0%)
+2025-12-18 05:17:01,596 - INFO - 🔥 USDC/USDT [RANGE]: BUY! Score 260/400 (65.0%)
+2025-12-18 05:17:01,636 - INFO - ✅ Alert sent for SOL/USDT
+2025-12-18 05:17:01,665 - INFO - ✅ Alert sent for USDC/USDT
+2025-12-18 05:17:01,800 - INFO - 🔥 LINK/USDT [RANGE]: BUY! Score 250/400 (62.5%)
+2025-12-18 05:17:01,834 - INFO - 🔥 OKB/USDT [RANGE]: BUY! Score 290/400 (72.5%)
+2025-12-18 05:17:01,852 - INFO - 🔥 LTC/USDT [RANGE]: BUY! Score 270/400 (67.5%)
+2025-12-18 05:17:01,923 - INFO - ✅ Alert sent for LINK/USDT
+2025-12-18 05:17:01,961 - INFO - ✅ Alert sent for OKB/USDT
+2025-12-18 05:17:01,982 - INFO - ✅ Alert sent for LTC/USDT
+2025-12-18 05:17:02,168 - INFO - 🔥 TRX/USDT [RANGE]: BUY! Score 200/400 (50.0%)
+2025-12-18 05:17:02,192 - INFO - 📊 TON/USDT [RANGE]: 170/400 - قريب
+2025-12-18 05:17:02,293 - INFO - ✅ Alert sent for TRX/USDT
+2025-12-18 05:17:02,294 - INFO - ⏳ Waiting 300s...
+2025-12-18 05:19:24,590 - INFO - 🚀 Crypto Adaptive Bot v3.0 initialized!
+2025-12-18 05:19:26,967 - INFO - 🔥 ETH/USDT [RANGE]: BUY! Score 220/400 (55.0%)
+2025-12-18 05:19:27,037 - INFO - ✅ Alert sent for ETH/USDT
+2025-12-18 05:19:27,456 - INFO - 🔥 SOL/USDT [RANGE]: BUY! Score 200/400 (50.0%)
+2025-12-18 05:19:27,523 - INFO - ✅ Alert sent for SOL/USDT
