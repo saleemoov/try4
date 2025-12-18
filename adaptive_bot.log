@@ -1,0 +1,73 @@
+2025-12-18 04:53:14,491 - INFO - 🚀 Crypto Adaptive Bot v3.0 initialized!
+2025-12-18 04:53:14,492 - INFO - 🔥 Starting adaptive market scanning...
+2025-12-18 04:53:14,492 - INFO - ============================================================
+2025-12-18 04:53:14,492 - INFO - 📊 Scanning market...
+2025-12-18 04:53:16,448 - INFO - ✅ Found 30 symbols
+2025-12-18 04:53:16,720 - INFO - 🔥 ETH/USDT [RANGE]: BUY! Score 260/400 (65.0%)
+2025-12-18 04:53:16,826 - INFO - ✅ Alert sent for ETH/USDT
+2025-12-18 04:53:16,850 - INFO - 🔥 USDC/USDT [RANGE]: BUY! Score 260/400 (65.0%)
+2025-12-18 04:53:16,860 - INFO - 🔥 SOL/USDT [RANGE]: BUY! Score 310/400 (77.5%)
+2025-12-18 04:53:16,940 - INFO - ✅ Alert sent for USDC/USDT
+2025-12-18 04:53:16,967 - INFO - 🔥 DOGE/USDT [RANGE]: BUY! Score 270/400 (67.5%)
+2025-12-18 04:53:16,968 - INFO - ✅ Alert sent for SOL/USDT
+2025-12-18 04:53:16,984 - INFO - 🔥 XRP/USDT [RANGE]: BUY! Score 270/400 (67.5%)
+2025-12-18 04:53:16,989 - INFO - 🔥 BTC/USDT [RANGE]: BUY! Score 210/400 (52.5%)
+2025-12-18 04:53:17,095 - INFO - ✅ Alert sent for DOGE/USDT
+2025-12-18 04:53:17,123 - INFO - ✅ Alert sent for BTC/USDT
+2025-12-18 04:53:17,147 - INFO - ✅ Alert sent for XRP/USDT
+2025-12-18 04:53:17,156 - INFO - 🔥 BNB/USDT [RANGE]: BUY! Score 230/400 (57.5%)
+2025-12-18 04:53:17,212 - INFO - 🔥 LINK/USDT [RANGE]: BUY! Score 340/400 (85.0%)
+2025-12-18 04:53:17,216 - INFO - 🔥 ADA/USDT [RANGE]: BUY! Score 250/400 (62.5%)
+2025-12-18 04:53:17,222 - INFO - ✅ Alert sent for BNB/USDT
+2025-12-18 04:53:17,348 - INFO - 🔥 LTC/USDT [RANGE]: BUY! Score 270/400 (67.5%)
+2025-12-18 04:53:17,402 - INFO - 🔥 AVAX/USDT [RANGE]: BUY! Score 270/400 (67.5%)
+2025-12-18 04:53:17,412 - INFO - ✅ Alert sent for LINK/USDT
+2025-12-18 04:53:17,432 - INFO - ✅ Alert sent for ADA/USDT
+2025-12-18 04:53:17,473 - INFO - 🔥 BCH/USDT [UPTREND_PULLBACK]: BUY! Score 270/400 (67.5%)
+2025-12-18 04:53:17,488 - INFO - ✅ Alert sent for LTC/USDT
+2025-12-18 04:53:17,511 - INFO - ✅ Alert sent for AVAX/USDT
+2025-12-18 04:53:17,557 - INFO - ✅ Alert sent for BCH/USDT
+2025-12-18 04:53:17,624 - INFO - 🔥 TON/USDT [RANGE]: BUY! Score 250/400 (62.5%)
+2025-12-18 04:53:17,651 - INFO - 🔥 TRX/USDT [RANGE]: BUY! Score 290/400 (72.5%)
+2025-12-18 04:53:17,703 - INFO - ✅ Alert sent for TON/USDT
+2025-12-18 04:53:17,737 - INFO - ✅ Alert sent for TRX/USDT
+2025-12-18 04:53:17,757 - INFO - ⏳ Waiting 300s...
+2025-12-18 05:00:15,459 - INFO - 🚀 Crypto Adaptive Bot v3.0 initialized!
+2025-12-18 05:00:15,460 - INFO - 🔥 Starting adaptive market scanning...
+2025-12-18 05:00:15,460 - INFO - ============================================================
+2025-12-18 05:00:15,460 - INFO - 📊 Scanning market...
+2025-12-18 05:00:17,436 - INFO - ✅ Found 30 symbols
+2025-12-18 05:00:17,708 - INFO - 🔥 ETH/USDT [RANGE]: BUY! Score 230/400 (57.5%)
+2025-12-18 05:00:17,813 - INFO - ✅ Alert sent for ETH/USDT
+2025-12-18 05:00:17,928 - INFO - 🔥 XRP/USDT [RANGE]: BUY! Score 270/400 (67.5%)
+2025-12-18 05:00:17,937 - INFO - 🔥 USDC/USDT [RANGE]: BUY! Score 260/400 (65.0%)
+2025-12-18 05:00:17,996 - INFO - 🔥 SOL/USDT [RANGE]: BUY! Score 280/400 (70.0%)
+2025-12-18 05:00:18,023 - INFO - 🔥 BTC/USDT [RANGE]: BUY! Score 210/400 (52.5%)
+2025-12-18 05:00:18,031 - INFO - 🔥 DOGE/USDT [RANGE]: BUY! Score 300/400 (75.0%)
+2025-12-18 05:00:18,070 - INFO - ✅ Alert sent for XRP/USDT
+2025-12-18 05:00:18,088 - INFO - ✅ Alert sent for USDC/USDT
+2025-12-18 05:00:18,154 - INFO - 🔥 BNB/USDT [RANGE]: BUY! Score 250/400 (62.5%)
+2025-12-18 05:00:18,155 - INFO - ✅ Alert sent for DOGE/USDT
+2025-12-18 05:00:18,186 - INFO - ✅ Alert sent for BTC/USDT
+2025-12-18 05:00:18,204 - INFO - ✅ Alert sent for SOL/USDT
+2025-12-18 05:00:18,231 - INFO - 🔥 OKB/USDT [RANGE]: BUY! Score 230/400 (57.5%)
+2025-12-18 05:00:18,233 - INFO - 🔥 ADA/USDT [RANGE]: BUY! Score 250/400 (62.5%)
+2025-12-18 05:00:18,236 - INFO - ✅ Alert sent for BNB/USDT
+2025-12-18 05:00:18,308 - INFO - 🔥 LINK/USDT [RANGE]: BUY! Score 340/400 (85.0%)
+2025-12-18 05:00:18,357 - INFO - 🔥 LTC/USDT [RANGE]: BUY! Score 300/400 (75.0%)
+2025-12-18 05:00:18,359 - INFO - ✅ Alert sent for OKB/USDT
+2025-12-18 05:00:18,384 - INFO - ✅ Alert sent for ADA/USDT
+2025-12-18 05:00:18,417 - INFO - ✅ Alert sent for LINK/USDT
+2025-12-18 05:00:18,440 - INFO - 🔥 BCH/USDT [UPTREND_PULLBACK]: BUY! Score 270/400 (67.5%)
+2025-12-18 05:00:18,445 - INFO - ✅ Alert sent for LTC/USDT
+2025-12-18 05:00:18,471 - INFO - 🔥 AVAX/USDT [RANGE]: BUY! Score 270/400 (67.5%)
+2025-12-18 05:00:18,555 - INFO - 🔥 PENGU/USDT [RANGE]: BUY! Score 340/400 (85.0%)
+2025-12-18 05:00:18,559 - INFO - ✅ Alert sent for BCH/USDT
+2025-12-18 05:00:18,613 - INFO - ✅ Alert sent for AVAX/USDT
+2025-12-18 05:00:18,691 - INFO - 📊 TRX/USDT [RANGE]: 170/400 - قريب
+2025-12-18 05:00:18,715 - INFO - 🔥 WLFI/USDT [RANGE]: BUY! Score 230/400 (57.5%)
+2025-12-18 05:00:18,717 - INFO - 🔥 TON/USDT [RANGE]: BUY! Score 250/400 (62.5%)
+2025-12-18 05:00:18,717 - INFO - ✅ Alert sent for PENGU/USDT
+2025-12-18 05:00:18,808 - INFO - ✅ Alert sent for WLFI/USDT
+2025-12-18 05:00:18,832 - INFO - ✅ Alert sent for TON/USDT
+2025-12-18 05:00:18,834 - INFO - ⏳ Waiting 300s...
