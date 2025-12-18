@@ -1080,6 +1080,10 @@ class CryptoAdaptiveBot:
         # إعداد التنبيهات
         self.notifier = TelegramNotifier(telegram_token, telegram_chat_id)
         
+        # 🔥 نظام Cooldown: لمنع تكرار الإشارات
+        self.signal_history = {}  # {symbol: {'last_signal_time': datetime, 'last_price': float}}
+        self.cooldown_hours = 2    # لا يرسل نفس العملة إلا بعد ساعتين
+        
         logger.info("🚀 Crypto Adaptive Bot v3.0 initialized!")
     
     def run(self):
@@ -1157,15 +1161,50 @@ class CryptoAdaptiveBot:
             
             # معالجة الإشارة
             if signal['signal'] == 'BUY':
-                signal['symbol'] = symbol
-                logger.info(f"🔥 {symbol} [{mode}]: BUY! Score {signal['score']}/{signal['max_score']} ({signal['percentage']:.1f}%)")
-                self.notifier.send_adaptive_alert(signal)
+                # 🔥 فحص Cooldown قبل الإرسال
+                if self._should_send_signal(symbol, signal['entry']):
+                    signal['symbol'] = symbol
+                    logger.info(f"🔥 {symbol} [{mode}]: BUY! Score {signal['score']}/{signal['max_score']} ({signal['percentage']:.1f}%)")
+                    self.notifier.send_adaptive_alert(signal)
+                    
+                    # تسجيل الإشارة
+                    self._record_signal(symbol, signal['entry'])
+                else:
+                    logger.debug(f"⏭️ {symbol}: Skipped (cooldown active)")
             
             elif signal.get('score', 0) > 150:
                 logger.info(f"📊 {symbol} [{mode}]: {signal['score']}/{signal.get('max_score', 400)} - قريب")
         
         except Exception as e:
             logger.warning(f"⚠️ {symbol} analysis failed: {e}")
+    
+    def _should_send_signal(self, symbol: str, current_price: float) -> bool:
+        """فحص: هل يجب إرسال الإشارة؟"""
+        
+        # إذا لم يتم إرسال إشارة من قبل لهذه العملة
+        if symbol not in self.signal_history:
+            return True
+        
+        last_signal = self.signal_history[symbol]
+        time_since_last = datetime.now() - last_signal['last_signal_time']
+        
+        # إذا مر أكثر من cooldown_hours
+        if time_since_last.total_seconds() / 3600 >= self.cooldown_hours:
+            return True
+        
+        # إذا السعر تغير كثير (>2%)
+        price_change = abs(current_price - last_signal['last_price']) / last_signal['last_price']
+        if price_change > 0.02:  # 2%
+            return True
+        
+        return False
+    
+    def _record_signal(self, symbol: str, price: float):
+        """تسجيل الإشارة في السجل"""
+        self.signal_history[symbol] = {
+            'last_signal_time': datetime.now(),
+            'last_price': price
+        }
 
 # ============================================================================
 # 8️⃣ ENTRY POINT
