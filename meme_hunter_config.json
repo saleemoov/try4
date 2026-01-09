@@ -1,0 +1,53 @@
+{
+  "telegram": {
+    "bot_token": "YOUR_TELEGRAM_BOT_TOKEN_HERE",
+    "chat_id": "YOUR_TELEGRAM_CHAT_ID_HERE"
+  },
+  
+  "detection_criteria": {
+    "min_liquidity_usd": 50000,
+    "min_volume_24h_usd": 200000,
+    "min_transactions_24h": 5000,
+    "min_holders": 500,
+    "liquidity_lock_required": true,
+    "min_price_change_1h": 20.0,
+    "min_price_change_5m": 5.0,
+    "max_price_change_24h": 2000.0
+  },
+  
+  "social_requirements": {
+    "min_twitter_followers": 1000,
+    "min_telegram_members": 500,
+    "require_verified_contract": true
+  },
+  
+  "risk_management": {
+    "max_position_size_pct": 0.01,
+    "max_total_meme_exposure": 0.03,
+    "stop_loss_pct": -15.0,
+    "max_concurrent_positions": 3,
+    "target_1_pct": 50.0,
+    "target_2_pct": 150.0,
+    "target_3_pct": 500.0,
+    "exit_1_pct": 0.50,
+    "exit_2_pct": 0.30,
+    "exit_3_pct": 0.20
+  },
+  
+  "timing": {
+    "max_hold_hours": 12,
+    "scan_interval_seconds": 60,
+    "cooldown_hours": 4,
+    "max_signals_per_day": 5
+  },
+  
+  "target_platforms": {
+    "primary_chain": "solana",
+    "backup_chains": ["bsc", "ethereum", "base"]
+  },
+  
+  "blacklist": {
+    "tokens": [],
+    "creators": []
+  }
+}
