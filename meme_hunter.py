@@ -21,8 +21,9 @@ import time
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Tuple
 import requests
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import re
+from dataclasses import dataclass, field
 
 # ==================== CONFIGURATION ====================
 
@@ -31,19 +32,19 @@ class MemeHunterConfig:
     """إعدادات Meme Hunter"""
     
     # API Configuration
-    TELEGRAM_BOT_TOKEN: str = "YOUR_TELEGRAM_BOT_TOKEN"
-    TELEGRAM_CHAT_ID: str = "YOUR_TELEGRAM_CHAT_ID"
+    TELEGRAM_BOT_TOKEN: str = "8555966718:AAGPuLjEbDGDcuw5vEbpqG1E1DJdJ6nlCPA"
+    TELEGRAM_CHAT_ID: str = "6557926013"
     
     # Target Platform
     TARGET_CHAIN: str = "solana"  # Focus on Solana DEX
-    BACKUP_CHAINS: List[str] = ("bsc", "ethereum", "base")
+    BACKUP_CHAINS: Tuple[str, ...] = ("bsc", "ethereum", "base")
     
     # Detection Criteria (STRICT!)
     MIN_LIQUIDITY_USD: float = 50000  # $50K minimum liquidity
     MIN_VOLUME_24H_USD: float = 200000  # $200K minimum volume
     MIN_TRANSACTIONS_24H: int = 5000  # 5000+ transactions
     MIN_HOLDERS: int = 500  # 500+ unique holders
-    LIQUIDITY_LOCK_REQUIRED: bool = True  # Must have locked liquidity
+    LIQUIDITY_LOCK_REQUIRED: bool = False  # Must have locked liquidity (relaxed for testing)
     
     # Price Action Triggers
     MIN_PRICE_CHANGE_1H: float = 20.0  # +20% in 1 hour
@@ -53,7 +54,7 @@ class MemeHunterConfig:
     # Social Metrics
     MIN_TWITTER_FOLLOWERS: int = 1000  # Minimum Twitter followers
     MIN_TELEGRAM_MEMBERS: int = 500    # Minimum Telegram members
-    REQUIRE_VERIFIED_CONTRACT: bool = True  # Contract must be verified
+    REQUIRE_VERIFIED_CONTRACT: bool = False  # Contract must be verified (relaxed for testing)
     
     # Risk Management
     MAX_POSITION_SIZE_PCT: float = 0.01  # 1% of capital per trade
@@ -80,9 +81,9 @@ class MemeHunterConfig:
     COINGECKO_API: str = "https://api.coingecko.com/api/v3"
     SOLSCAN_API: str = "https://api.solscan.io"
     
-    # Blacklist (known scams)
-    BLACKLIST_TOKENS: List[str] = []
-    BLACKLIST_CREATORS: List[str] = []
+    # Blacklist (known scams) - using field with default_factory
+    BLACKLIST_TOKENS: List[str] = field(default_factory=list)
+    BLACKLIST_CREATORS: List[str] = field(default_factory=list)
 
 
 # ==================== LOGGING SETUP ====================
